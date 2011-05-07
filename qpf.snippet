@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>qpf - QuerySpec projection field</Title>
+      <Description>qpf - Insert a QuerySpec project field for a dynamic query</Description>
+      <Shortcut>qpf</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>SD.LLBLGen.Pro.ORMSupportClasses</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+         <Literal>
+            <ID>fieldName</ID>
+            <Default>FieldName</Default>
+         </Literal>
+         <Literal>
+            <ID>entityName</ID>
+            <Default>EntityName</Default>
+         </Literal>
+         <Literal>
+            <ID>toValue</ID>
+            <Default>ToValue&lt;string&gt;()</Default>
+         </Literal>
+      </Declarations>
+      <Code Language="csharp">
+<![CDATA[$fieldName$ = $entityName$Fields.$fieldName$.$toValue$$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

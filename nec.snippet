@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>nec - new EntityCollection</Title>
+      <Description>nec - Insert new EntityCollection type</Description>
+      <Shortcut>nec</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>SD.LLBLGen.Pro.ORMSupportClasses</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+         <Literal>
+            <ID>entityName</ID>
+            <Default>EntityName</Default>
+         </Literal>
+         <Literal>
+            <ID>varName</ID>
+            <Default>entities</Default>
+         </Literal>
+      </Declarations>
+      <Code Language="csharp">
+<![CDATA[EntityCollection<$entityName$Entity> $varName$ = new EntityCollection<$entityName$Entity>();$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

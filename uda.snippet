@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>uda - Using DataAccessAdapter</Title>
+      <Description>udal - Insert using around DataAccessAdapter with LinqMetaData and QueryFactory</Description>
+      <Shortcut>uda</Shortcut>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>SD.LLBLGen.Pro.ORMSupportClasses</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+         <Literal>
+            <ID>db</ID>
+            <Default>DB</Default>
+         </Literal>
+         <Literal>
+            <ID>server</ID>
+            <Default>Server</Default>
+         </Literal>
+      </Declarations>
+      <Code Language="csharp">
+<![CDATA[using ( IDataAccessAdapter da = new DataAccessAdapter("Server=$server$;Database=$db$;integrated security=SSPI") )
+{
+    LinqMetaData md = new LinqMetaData(da);
+    QueryFactory qf = new QueryFactory();
+    
+    $end$
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
